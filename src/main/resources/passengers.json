@@ -1,0 +1,111 @@
+{
+     "passengers":[
+          {
+            "name": "Andrew",
+            "destination": "SQUARE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Daria",
+            "destination": "PARK",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Mary",
+            "destination": "THEATRE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Ivan",
+            "destination": "SQUARE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Boris",
+            "destination": "RAILWAY_STATION",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "John",
+            "destination": "SQUARE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Alice",
+            "destination": "RAILWAY_STATION",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Bob",
+            "destination": "SQUARE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Olivia",
+            "destination": "RAILWAY_STATION",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Jessica",
+            "destination": "SQUARE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Grace",
+            "destination": "THEATRE",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Faith",
+            "destination": "RAILWAY_STATION",
+            "location": "UNIVERSITY"
+          },
+          {
+            "name": "Samuel",
+            "destination": "SQUARE",
+            "location": "PARK"
+          },
+          {
+            "name": "Joseph",
+            "destination": "THEATRE",
+            "location": "PARK"
+          },
+          {
+            "name": "Jacob",
+            "destination": "RAILWAY_STATION",
+            "location": "PARK"
+          },
+          {
+            "name": "Thomas",
+            "destination": "SQUARE",
+            "location": "PARK"
+          },
+          {
+            "name": "Ivy",
+            "destination": "SQUARE",
+            "location": "PARK"
+          },
+          {
+            "name": "Florance",
+            "destination": "SQUARE",
+            "location": "THEATRE"
+          },
+          {
+            "name": "Oscar",
+            "destination": "UNIVERSITY",
+            "location": "THEATRE"
+          },
+          {
+            "name": "Paige",
+            "destination": "RAILWAY_STATION",
+            "location": "SQUARE"
+          },
+          {
+            "name": "Fill",
+            "destination": "RAILWAY_STATION",
+            "location": "SQUARE"
+          }
+
+    ]
+
+}

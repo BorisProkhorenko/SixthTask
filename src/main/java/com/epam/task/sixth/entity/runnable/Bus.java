@@ -2,6 +2,8 @@ package com.epam.task.sixth.entity.runnable;
 
 import com.epam.task.sixth.entity.BusStop;
 import com.epam.task.sixth.entity.Route;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +21,7 @@ public class Bus implements Runnable {
     private final static int BUS_CAPACITY = 10;
     private final static Lock LOCKER = new ReentrantLock();
     private final static int THREAD_POOL = 10;
+    private final static Logger LOGGER = LogManager.getLogger();
 
 
     private int id;
@@ -54,7 +57,7 @@ public class Bus implements Runnable {
                 busesOnStop.remove(this);
                 System.out.println("Bus " + id + " left " + location + " stop, passengers:" + passengers);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage());
             }
             SEMAPHORE.release();
         }
@@ -66,7 +69,7 @@ public class Bus implements Runnable {
     private void startPassengersInBus() {
         LOCKER.lock();
         try {
-            executorService=Executors.newFixedThreadPool(THREAD_POOL);
+            executorService = Executors.newFixedThreadPool(THREAD_POOL);
             passengers.forEach(executorService::execute);
             executorService.shutdown();
         } finally {
@@ -76,7 +79,7 @@ public class Bus implements Runnable {
 
     private void startPassengersInBusStop() {
         List<Passenger> passengersOnStop = route.getPassengersOnStops().get(location);
-        executorService=Executors.newFixedThreadPool(THREAD_POOL);
+        executorService = Executors.newFixedThreadPool(THREAD_POOL);
         passengersOnStop.forEach(executorService::execute);
         executorService.shutdown();
     }

@@ -14,6 +14,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
+    private final static int BUSES_COUNT = 4;
+
     public static void main(String[] args) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         Passengers passengersWrapper = mapper.readValue(new File("src/main/resources/passengers.json"),
@@ -24,9 +26,7 @@ public class Main {
         LinkedList<BusStop> stops = new LinkedList<>(temp);
         RouteBuilder routeBuilder = new RouteBuilder();
         Route route = routeBuilder.build(stops, passengers);
-        route.sendBuses(4);
-
-
+        route.sendBuses(BUSES_COUNT);
 
 
 
